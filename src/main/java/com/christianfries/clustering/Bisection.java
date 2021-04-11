@@ -14,6 +14,12 @@ import com.christianfries.clustering.nodes.Node;
 import com.christianfries.clustering.nodes.Preference;
 import com.christianfries.clustering.nodes.SzenarioValuation;
 
+/**
+ * Calculates brute force the bisections (splittings) of a set based on mandatory constraints
+ * and preferences for the elements.
+ * 
+ * @author Christian Fries
+ */
 public class Bisection {
 
 	private final List<Node> nodes;
@@ -88,7 +94,7 @@ public class Bisection {
 		clustering.bisections();
 	}
 
-	private void bisections() {
+	public void bisections() {
 		// Setup completed
 		System.out.println("Working on the following input to the problem:");
 		for(final Node node : nodes) {
