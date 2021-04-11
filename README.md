@@ -56,7 +56,7 @@ Die Präferenzen der Elemente wird als `Map` definiert
 ```
 		final Map<Node, List<Preference>> perferences = new HashMap<Node, List<Preference>>();
 ```
-die für jede `Node` ein oder mehere Präferenzen definiert. Eine Präferenz ist ein Paar bestehend aus einer anderen Node und einem Gewicht (das z.B. eine Priorität ausdrück).
+die für jede `Node` ein oder mehrere Präferenzen definiert. Eine Präferenz ist ein Paar bestehend aus einer anderen Node und einem Gewicht (das z.B. eine Priorität ausdrückt).
 
 Das Programm gibt dann eine Tabelle mit den ersten 100 besten Aufteilungen aus.
 
