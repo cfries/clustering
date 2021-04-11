@@ -33,7 +33,7 @@ Das Programm besitzt aktuell kein GUI und keine Datenschnittstelle, sondern nur 
 
 In der `main()`-methode von `com.christianfries.clustering.Bisection` findet sich ein Beispiel, dass angepasst werden kann.
 
-Es wird zuerst die Grundmenge als "Liste" definiert. Für jede `Node` wird dabei als argument spezifiziert welche Ausprägungen einzelne Kategorien haben. Dies ist eine Liste von Integern (Ausprägung). `List.of(a,b)` bedeutet z.B., dass die erste Kategorie die Ausprägung a hat und die zweite Kategorie die Ausprägung b.
+Es wird zuerst die Grundmenge als "Liste" definiert. Für jede `Node` wird dabei als Argument spezifiziert welche Ausprägungen einzelne Kategorien haben. Dies ist eine Liste von Integern (Ausprägung). `List.of(a,b)` bedeutet z.B., dass die erste Kategorie die Ausprägung a hat und die zweite Kategorie die Ausprägung b.
 
 ```
 		final List<Node> nodes = new ArrayList<>();
@@ -41,6 +41,7 @@ Es wird zuerst die Grundmenge als "Liste" definiert. Für jede `Node` wird dabei
 		nodes.add(new Node(List.of(1,0)));
 		nodes.add(new Node(List.of(0,1)));
 ```
+Das Beispiel oben legt 3 Schüler an. Wenn die erste Kategorie "2. Fremdsprache" ist mit den Werten 0=Französisch, 1=Latein und die zweite Katregorie "Religion" mit den Werten 0=kat., 1=ev., dann haben die Schüler (Französisch,kat.), (Latein,kat.), (Französisch,ev.).
 
 Sodann wird definiert welche Größen die Ausprägungen in Gruppe A haben sollen. Dies wird als `int[][]`-Matrix spezifiziert. So ist z.B.
 
@@ -48,7 +49,7 @@ Sodann wird definiert welche Größen die Ausprägungen in Gruppe A haben sollen
 		final int[][] mandatorySizes = new int[][] { new int[] {9,6}, new int[] {8,6,1} };
 ```
 
-Die Spezifikation, dass die erste Kategorie 9 Element mit Ausprägung 0 und 6 Elemente mit Ausprägung 1 haben soll und die zweite Kategorie 8 Elemente mit Ausprägung 0, 6 Elemente mit Ausprägung 1, 1 Element mit Ausprägung 2.
+Die Spezifikation, dass die erste Kategorie 9 Element mit Ausprägung 0 und 6 Elemente mit Ausprägung 1 haben soll und die zweite Kategorie 8 Elemente mit Ausprägung 0, 6 Elemente mit Ausprägung 1, 1 Element mit Ausprägung 2. Aktuell müssen exakt diese Größen getroffen werden. Eine Erwerterung, dass Bereiche erlaubt sind wäre hier einfach möglich.
 
 Die Präferenzen der Elemente wird als `Map` definiert
 
