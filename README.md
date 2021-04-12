@@ -60,6 +60,19 @@ die für jede `Node` ein oder mehrere Präferenzen definiert. Eine Präferenz is
 
 Das Programm gibt dann eine Tabelle mit den ersten 100 besten Aufteilungen aus.
 
+
+Prerequisite
+-------
+
+The project uses Maven an build management tool and requires Java 11 or better. If have you git, Maven and Java installed you may check it out and run it via
+```
+git clone https://github.com/cfries/clustering
+cd clustering
+mvn install exec:java -Dexec.mainClass=com.christianfries.clustering.Bisection
+```
+
+
+
 License
 -------
 
